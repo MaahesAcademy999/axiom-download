@@ -113,6 +113,31 @@
     font-variant-numeric: tabular-nums;
   }
 
+  /* Screenshot strip */
+  .shots {
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding: 2px 22px 8px;
+    margin: 0 -22px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .shots figure { flex: none; width: 190px; scroll-snap-align: center; }
+  .shots img {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    background: var(--panel-2);
+  }
+  .shots figcaption {
+    margin-top: 9px;
+    font-size: 0.78rem;
+    color: var(--muted);
+    text-align: center;
+  }
+
   .attrs { display: flex; flex-direction: column; gap: 11px; }
   .attr { display: flex; align-items: baseline; gap: 11px; font-size: 0.93rem; }
   .dot { width: 9px; height: 9px; border-radius: 50%; flex: none; transform: translateY(-1px); }
@@ -186,6 +211,24 @@
   <div class="card">
     <a class="btn" href="axiom-v2.3.0.apk">Download for Android</a>
     <p class="meta">v2.3.0 &middot; 8.7&nbsp;MB &middot; Android 7.0+</p>
+  </div>
+
+  <div class="card">
+    <h2>A look inside</h2>
+    <div class="shots">
+      <figure>
+        <img src="shot-quests.jpg" width="540" height="1095" alt="Axiom's daily quest board, one quest per attribute" loading="lazy" />
+        <figcaption>Today's quests</figcaption>
+      </figure>
+      <figure>
+        <img src="shot-hero.jpg" width="540" height="1095" alt="Axiom character screen with 3D avatar, title and rank progress" loading="lazy" />
+        <figcaption>Your character</figcaption>
+      </figure>
+      <figure>
+        <img src="shot-stats.jpg" width="540" height="1095" alt="Attribute levels and a training chain in Axiom" loading="lazy" />
+        <figcaption>Attributes &amp; chains</figcaption>
+      </figure>
+    </div>
   </div>
 
   <div class="card">
